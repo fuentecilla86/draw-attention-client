@@ -1,7 +1,6 @@
 //client.js
 // var Gpio = require('onoff').Gpio;
 // var LED = new Gpio(14, 'out');
-var sleep = require('sleep');
 var io = require('socket.io-client');
 var socket = io.connect('http://localhost:3001', {reconnect: true});
 
@@ -23,5 +22,3 @@ socket.on('switch-update', (state) => {
     console.log('Led apagado')
   }
 });
-
-// socket.emit('send-nickname', 'raspberrypi');
