@@ -22,3 +22,15 @@ socket.on('switch-update', (state) => {
     console.log('Led apagado')
   }
 });
+
+socket.on('init-state-for-raspberry', (state) => {
+  console.log('LED ' + state);
+  if (state) {
+      //LED.writeSync(1);
+      console.log('Encendido');
+
+  } else {
+    //LED.writeSync(0)
+    console.log('Led apagado')
+  }
+});
